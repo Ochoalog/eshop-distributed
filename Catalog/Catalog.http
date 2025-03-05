@@ -16,7 +16,7 @@ Content-Type: application/json
     "id": 10,
     "name": "new Swn Flash",
     "Description": "A new product",
-    "Price": 59.99,
+    "Price": 62.99,
     "ImageUrl": "product10.png"
 }
 ###
@@ -27,7 +27,7 @@ Content-Type: application/json
     "id": 10,
     "name": "UPDATED Swn Flash",
     "Description": "A new product",
-    "Price": 59.99,
+    "Price": 70.99,
     "ImageUrl": "product10.png"
 }
 ###
