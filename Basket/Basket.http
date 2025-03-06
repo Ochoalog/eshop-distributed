@@ -1,12 +1,15 @@
 @Basket_HostAddress = https://localhost:7252/basket
+@acessToken = eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ3RzdUN3BBNkFQVXY3NFIybmpQR0ZzVjkzOGtQNENsdUhXeWotaktqU1FBIn0.eyJleHAiOjE3NDEyMjQ3MjIsImlhdCI6MTc0MTIyNDQyMiwianRpIjoiMWYyODIwY2MtMWI1Yy00N2Y4LThhYzItOTNiYWQ5NWVhMjllIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9lc2hvcCIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiIxZWYyZmJjNi1lYTdlLTQ2NjktOGUwZi00OTNkMzYyYThmMDMiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJlc2hvcC1jbGllbnQiLCJzaWQiOiJkZDliYTBkMS01YTE4LTRjZmUtYmNkMy1lYmRhNjQ2ZDFlZmIiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbIi8qIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJvZmZsaW5lX2FjY2VzcyIsInVtYV9hdXRob3JpemF0aW9uIiwiZGVmYXVsdC1yb2xlcy1lc2hvcCJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZW1haWwiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwibmFtZSI6InRlc3QgdGVzdCIsInByZWZlcnJlZF91c2VybmFtZSI6InRlc3QiLCJnaXZlbl9uYW1lIjoidGVzdCIsImZhbWlseV9uYW1lIjoidGVzdCIsImVtYWlsIjoidGVzdEB0ZXN0LmNvbSJ9.nA7MrYJk9lFH9QLJtdGNdOY6cpOhzN38NjxKETiWLqAChxhEnnzWE-i_wLVe_mpxTfN5nJFYGfkZqxj9lPo4XNghfRMQfwl5x3wgQrJ5jlk8OA-31TTBQ5m9xIv2HNurEX5rAOvrJRpNZBrpb2Z03OyLjgnJEpfxDBqim8acde3bUEVuid5wAHGUvCq94rJADG5qOWhfCHxegW3AWgQXz-9s8YYI-NPlj4ocLSJ96igpDq0ZflUch1nJZb6nxVOh0gD9VvuF7Rv0zoEvE81hPPQcOsf1Hu5nhULqb7K_4_VPkyJXcu_clHNrLNs-30tSUcqlA_YGas733-514CWTiQ
 
 GET {{Basket_HostAddress}}/myTestUser
 Accept: application/json
+Authorization: Bearer {{acessToken}}
 
 ###
 
 POST {{Basket_HostAddress}}
 Content-Type: application/json
+Authorization: Bearer {{acessToken}}
 {
     "UserName": "myTestUser",
     "Items": [
@@ -28,7 +31,7 @@ Content-Type: application/json
         "Quantity": 1,
         "Color": "Blue",
         "Price": 500,
-        "ProductId": 10,
+        "ProductId": 5,
         "ProductName": "Hiking Poles"
         }
     ]
@@ -38,5 +41,11 @@ Content-Type: application/json
 
 DELETE {{Basket_HostAddress}}/myTestUser
 Content-Type: application/json
+Authorization: Bearer {{acessToken}}
 
 ###
+
+POST http://localhost:8080/realms/eshop/protocol/openid-connect/token
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=password&client_id=eshop-client&scope=email openid&username=test&password=1234
