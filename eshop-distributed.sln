@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35825.156 d17.13
+VisualStudioVersion = 17.13.35825.156
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "aspire", "aspire", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
@@ -16,6 +16,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalog", "Catalog\Catalog.csproj", "{6FCA0E99-5B56-4997-B853-DDB07BB698F8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basket", "Basket\Basket.csproj", "{A8C753A3-78CF-438A-B114-58A898ABD9B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp", "WebApp\WebApp.csproj", "{73A0E2D8-53B1-46F6-B945-FF0F7C261086}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{A8C753A3-78CF-438A-B114-58A898ABD9B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A8C753A3-78CF-438A-B114-58A898ABD9B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A8C753A3-78CF-438A-B114-58A898ABD9B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73A0E2D8-53B1-46F6-B945-FF0F7C261086}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73A0E2D8-53B1-46F6-B945-FF0F7C261086}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73A0E2D8-53B1-46F6-B945-FF0F7C261086}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73A0E2D8-53B1-46F6-B945-FF0F7C261086}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,6 +54,7 @@ Global
 		{CACEA668-8734-4442-9398-F9F018EC8BD1} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{6FCA0E99-5B56-4997-B853-DDB07BB698F8} = {2C031D4E-C36B-4AB5-A378-189E92BDF132}
 		{A8C753A3-78CF-438A-B114-58A898ABD9B6} = {2C031D4E-C36B-4AB5-A378-189E92BDF132}
+		{73A0E2D8-53B1-46F6-B945-FF0F7C261086} = {20E10510-8617-48E7-B281-BB8518D0596C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {84D501D4-C4AE-493D-BFE8-E1E502869289}
